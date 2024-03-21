@@ -1,5 +1,8 @@
 import google.generativeai as genai
 import sqlite3
+import pandas as pd
+
+
 api_key1='AIzaSyCEyKMGgq1VAkuoGAdyeZR3FcUHQSjKiKI'
 api_key2="AIzaSyDAxglkJMZiptI5U7iiEajpbGi3DglgR2E"
 api_key3='AIzaSyDAxglkJMZiptI5U7iiEajpbGi3DglgR2E'
@@ -159,11 +162,14 @@ also the sql code should not have ``` in beginning or end and sql word in output
         response=self.response(question,self.mode_used)
         print(response)
         if self.mode==0:
-            return english_res
+            return response
         elif self.mode==2:    
             data=self.read_sql_query(response,self.db)
+            self.convert_to_csv(data)
             english_res=self.response(str(response)+":"+str(data),self.eng_response_prompt)
         else:
             pass    
         return english_res
-    
+    def convert_to_csv(self,response_from_db):
+        frame=pd.DataFrame(response_from_db)
+        frame.to_csv("output.csv",)
