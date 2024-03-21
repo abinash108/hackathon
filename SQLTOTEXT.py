@@ -1,16 +1,27 @@
 import google.generativeai as genai
 import sqlite3
+import pandas as pd
+import os
+import numpy as np
+
+
 api_key1='AIzaSyCEyKMGgq1VAkuoGAdyeZR3FcUHQSjKiKI'
 api_key2="AIzaSyDAxglkJMZiptI5U7iiEajpbGi3DglgR2E"
 api_key3='AIzaSyDAxglkJMZiptI5U7iiEajpbGi3DglgR2E'
-genai.configure(api_key=api_key3)
+genai.configure(api_key=api_key1)
 class Bot():
     def __init__(self,mode=0):
         self.model=genai.GenerativeModel('gemini-pro')
         self.mode=mode
+        self.cache_data=None
         self.mode_used=None
         self.db="database_adress"
-        self.normal_mode=["You behave as normal as you are."]
+        self.normal_mode=["""
+        You are a normal chatbot with no limitations.
+                          
+                          
+                          
+                          """]
         self.analytics_mode=["You are a god level data analyst"]
         self.english_qprompt=[
     """
@@ -129,10 +140,10 @@ also the sql code should not have ``` in beginning or end and sql word in output
         """
             I see you're an expert in understanding SQL queries! 
         I'll provide you with an SQL statement and its output. 
-            Your task is to translate the sql statement and the result in simple English form \n\n
+            Your task is to translate the sql statement and the result in simple English form in leeat possible words. and strictly don't output sql statements. \n\n
         For example,\nExample 1 - 
         SELECT COUNT(*) FROM randomtable ; : some random number 
-        your output should be something like , There are five students.also don't include any info about the sql query just provide the result in normal form
+        your output should be something like , There are five students. also don't include any info about the sql query just provide the result in normal form
     
     """
         ]
@@ -159,11 +170,28 @@ also the sql code should not have ``` in beginning or end and sql word in output
         response=self.response(question,self.mode_used)
         print(response)
         if self.mode==0:
-            return english_res
+            return response
         elif self.mode==2:    
             data=self.read_sql_query(response,self.db)
+            
+            self.cache_data=self.convert_to_csv(data)
             english_res=self.response(str(response)+":"+str(data),self.eng_response_prompt)
         else:
             pass    
         return english_res
+    def convert_to_csv(self,response_from_db):
+        frame=pd.DataFrame(response_from_db)
+        frame.to_csv(self.is_filename_valid())
+        return frame
+    def is_filename_valid(self):
+        current_dir=os.getcwd()
+        filename="output"
+        files=os.listdir(current_dir)
+        random_num=""
+        if filename+".csv" in files:
+            random_num=np.random.randint(0,500)
+
+
+        return filename+str(random_num)+".csv"
     
+        
