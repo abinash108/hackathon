@@ -1,1 +1,5 @@
 streamlit
+pip install google-generativeai
+sqlite3
+pandas
+numpy
