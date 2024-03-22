@@ -12,14 +12,8 @@ file_output=False
 
 tab1.title("DaTaBoT")
 st.sidebar.info("Welcome")
-data,chat=False,False
-def on_click_data(model):
-    model.mode=2
-def on_click_chat(model):
-    model.mode=0    
-data=st.sidebar.button("Data_mode",on_click=on_click_data(model))
-chat=st.sidebar.button("Chat_mode",on_click=on_click_chat(model))
-        
+
+
 
 
 
