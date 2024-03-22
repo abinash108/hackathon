@@ -27,6 +27,7 @@ A general prpose chatbot
 ## provide the schema in the bot.english_qpromot in main file with your schema
 
 ## Now intearact with your data using our system
+Result will be stored in .csv file in same folder
 
 Using default database "hr.db"
 schema is in bot.english_qprompt in main file
