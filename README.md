@@ -2,15 +2,15 @@
 
 Where innovation meets simplicity in data interaction. Our journey began with a vision to redefine how organizations engage with their data, driven by a relentless passion for streamlining complexity. Here, we stand committed to empowering businesses with intuitive tools that unlock the true potential of their data. Join us as we embark on a transformative journey to revolutionize the way businesses thrive in the digital age.
 ##  Usage:
-'''  
+'
 git clone https://github.com/abinash108/hackathon.git
-'''
-'''
+'
+'
 pip install -r requirements.txt
-'''
-'''
+'
+'
 streamlit run main.py
-'''
+'
 ---
 ##  This Bot Features:
 ###  Robust Security (exporting of the data, retrieving and anonymization)
