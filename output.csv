@@ -1,0 +1,7 @@
+,0,1,2,3,4,5,6,7
+0,1.0,John,Doe,john.doe@example.com,123-456-7890,"123 Main St, Anytown, USA",1.0,
+1,2.0,Jane,Smith,jane.smith@example.com,987-654-3210,"456 Elm St, Anytown, USA",2.0,1.0
+2,3.0,Michael,Johnson,michael.johnson@example.com,555-555-5555,"789 Oak St, Anytown, USA",3.0,1.0
+3,4.0,Emily,Brown,emily.brown@example.com,111-222-3333,"321 Pine St, Anytown, USA",1.0,2.0
+4,,Superhero,Employee,superhero@example.com,555-123-4567,123 Main Street,1.0,2.0
+5,,John,Doe,,,,,
