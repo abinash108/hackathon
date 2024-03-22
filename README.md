@@ -5,7 +5,9 @@ Where innovation meets simplicity in data interaction. Our journey began with a 
 '''  
 git clone https://github.com/abinash108/hackathon.git
 '''
+'''
 pip install -r requirements.txt
+'''
 '''
 streamlit run main.py
 '''
