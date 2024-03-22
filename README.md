@@ -18,38 +18,21 @@ streamlit run main.py
 ### Can be deployable on anywhere on server(EC2,etc) depending on the scalability of build production required.
 This README provides an overview of our product features and its business model and scalability!
 
-## Business Model
+## Usage
+#  Interactive Mode
+A general prpose chatbot
+# Interactive Mode
 
-### Subscription-Based Model
+## add your database.db file in place of hr.db 
+## provide the schema in the bot.english_qpromot in main file with your schema
 
-We offer a simple, tiered subscription model with monthly or annual pricing tiers based on the number of users or interactions. Starting with a basic plan offering essential features, users can scale up with premium plans offering advanced functionalities and support.
+## Now intearact with your data using our system
 
-### Per-Use Pricing
+Using default database "hr.db"
+schema is in bot.english_qprompt in main file
+# Analytical Mode
+--under devlopment 
 
-Organizations are charged based on the number of interactions or queries processed by the chatbot, with a straightforward pay-as-you-go pricing structure. This allows startups to align revenue with usage and scale pricing as the business grows.
 
-### Consulting and Implementation Services
-
-We provide affordable consulting and implementation packages to assist organizations in integrating the chatbot into their systems. Our services include basic customization and training to help startups generate additional revenue while establishing expertise in the field.
-
-### Value-Added Features
-
-Identifying key features that differentiate our chatbot service, we offer them as premium add-ons or upsell opportunities. Focusing on features that address specific pain points of target customers, we provide tangible value to our users.
-
-### Partnerships and Integrations
-
-We collaborate with complementary software providers or industry partners to offer integrated solutions. By forming strategic partnerships, we expand our service's capabilities and reach without significant upfront costs.
-
-### Freemium Model
-
-Introducing a limited-feature free version of our chatbot service, we aim to attract users and generate leads. Utilizing the freemium model, we drive user adoption and upsell premium features to users who require additional functionality or support.
-
-### Early Adopter Pricing
-
-We offer discounted pricing or special packages to early adopters or beta testers to incentivize initial sign-ups and gather feedback. Leveraging early adopters as brand advocates, we use their testimonials to attract new customers.
-
-## Getting Started
-
-To get started with our Chatbot Service, visit our website and sign up for a subscription plan that best fits your needs. Our team is here to assist you with any questions or implementation support you may require.
 
 Thank you for choosing our Chatbot Service! We look forward to helping you streamline your communication processes and enhance customer engagement.
